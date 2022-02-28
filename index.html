@@ -1,21 +1,86 @@
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<!-- TemplateBeginEditable name="doctitle" -->
-<title>Test</title>
-<!-- TemplateEndEditable -->
+
+<title>TEST</title>
+<script src="https://api.sandbox.checkout.com/"></script>
 <style type="text/css">
-<!--
-.STYLE4 {
-	font-family: "Times New Roman", Times, serif;
-	font-size: x-large;
-}
-.STYLE5 {font-size: x-large}
-.STYLE6 {color: #000000}
--->
 </style>
+<script>
+  $(function(){
+
+    $.ajax({ 
+      {
+  "source": {
+    "type": "token",
+    "token": "tok_4gzeau5o2uqubbk6fufs3m7p54"
+  },
+  "amount": 6540,
+  "currency": "USD",
+  "payment_type": "Recurring",
+  "reference": "ORD-5023-4E89",
+  "description": "Set of 3 masks",
+  "capture": true,
+  "capture_on": "2019-09-10T10:11:12Z",
+  "customer": {
+    "id": "cus_udst2tfldj6upmye2reztkmm4i",
+    "email": "brucewayne@gmail.com",
+    "name": "Bruce Wayne"
+  },
+  "billing_descriptor": {
+    "name": "SUPERHEROES.COM",
+    "city": "GOTHAM"
+  },
+  "shipping": {
+    "address": {
+      "address_line1": "Checkout.com",
+      "address_line2": "90 Tottenham Court Road",
+      "city": "London",
+      "state": "London",
+      "zip": "W1T 4TJ",
+      "country": "GB"
+    },
+    "phone": {
+      "country_code": "+1",
+      "number": "415 555 2671"
+    }
+  },
+  "3ds": {
+    "enabled": true,
+    "attempt_n3d": true,
+    "eci": "05",
+    "cryptogram": "AgAAAAAAAIR8CQrXcIhbQAAAAAA=",
+    "xid": "MDAwMDAwMDAwMDAwMDAwMzIyNzY=",
+    "version": "2.0.1"
+  },
+  "previous_payment_id": "pay_fun26akvvjjerahhctaq2uzhu4",
+  "risk": {
+    "enabled": false
+  },
+  "success_url": "http://example.com/payments/success",
+  "failure_url": "http://example.com/payments/fail",
+  "payment_ip": "90.197.169.245",
+  "recipient": {
+    "dob": "1985-05-15",
+    "account_number": "5555554444",
+    "zip": "W1T",
+    "last_name": "Jones"
+  },
+  "metadata": {
+    "coupon_code": "NY2018",
+    "partner_id": 123989
+  }
+}
+	},
+      dataType: "json", 
+      success: function(res){
+        
+    }});
+
+
+  })
+  </script>
 <!-- TemplateBeginEditable name="head" --><!-- TemplateEndEditable -->
 </head>
 
